@@ -1,13 +1,17 @@
 package game;
 import fixtures.Room;
 public class RoomManager {
+	String[] rooms;
+	String startingRoom;
+	
 	public void init() {
-	    fixtures.Room foyer = new Room(){
-			"The Foyer",
-			"a small foyer",
-			"The small entryway of a neo-colonial house. A dining room is open to the south, where a large table can be seen." + "\n"
-			+ "The hardwood floor leads west into doorway, next to a staircase that leads up to a second floor." + "\n"
-			+ "To the north is a small room, where you can see a piano.");
-			this.rooms[0] = foyer;
+	    	Room frontLawn = new Room("Front Lawn:", "Outside of a strange place you can't quite comprehend",
+	    			"Welcome to THE SPOOKY DOOR! You stand at the front door of a maze within the mind of a gerbil. "
+	    			+ "The oven is on and you feel the warm air rise to the top of your psyche... or was it a chill? "
+	    			+ "Steve Martin sits a few feet away from you strumming a banjo made of clavenets. And your eyebrows"
+	    			+ " begin to dance around your ears. Good luck travaersing this convoluted world!");
+			this.rooms[0] = frontLawn.getName();
+			this.startingRoom = frontLawn.getName();
 	        
+}
 }
