@@ -1,5 +1,5 @@
 package game;
-
+import fixtures.Room;
 public class RoomManager {
 	public void init() {
 	    fixtures.Room foyer = new Room(){
