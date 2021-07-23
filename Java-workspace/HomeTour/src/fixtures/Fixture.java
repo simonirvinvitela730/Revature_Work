@@ -15,11 +15,30 @@ public abstract class Fixture {
 		return name;
 	}
 	
-	public String shortDescription() {
+	public String getShortDescription() {
 		return shortDescription;
 	}
 	
-	public String longDescription() {
+	public String getLongDescription() {
 		return longDescription;
 	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	public void setLongDescription(String longDescription) {
+		this.longDescription = longDescription;
+	}
+
+	@Override
+	public String toString() {
+		return "Fixture [name=" + name + ", shortDescription=" + shortDescription + ", longDescription="
+				+ longDescription + "]";
+	}
 }
+	
