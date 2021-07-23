@@ -37,8 +37,8 @@ public class RoomManager {
 			rooms.add(mainHall);
 			
 			Room kitchen = new Room("Kitchen", "A small kitchen with a worn expression",
-	    			"You come across a kitchen on the northwest side of the estate. It appears the tennants enjoy guzzling water\n"
-	    			+ "And as you might expect the larynxes of small children. Such is the life of a gerbil.\n"
+	    			"You come across a kitchen on the northwest side of the estate. It appears the tennants enjoy guzzling water.\n"
+	    			+ "And, as you might expect, the larynxes of small children. Such is the life of a gerbil.\n"
 	    			+ "Steve Martin stretches his long appendiges and questions his very existence to the side of the room.");
 			rooms.add(kitchen);
 			
@@ -62,7 +62,7 @@ public class RoomManager {
 			
 			Room laundry = new Room("Laundry Room", "A mere closet containing 3 New York aparments",
 	    			"As you exit the dining room you enter a laundry room containing a slew of apartments.\n"
-	    			+ "While a laundry room by name, there are no washer or dryers, just enough space to walk through uncomfortably.\n"
+	    			+ "While a laundry room by name, there are no washers or dryers, only enough space to walk uncomfortably through.\n"
 	    			+ "Viles of various liquids line the wall and tell each other stories about 'the good old days.'\n"
 	    			+ "Steve Martin readily joins in, recounting their good times at the 1974 Montreal Olympics.");
 			rooms.add(laundry);

@@ -69,7 +69,7 @@ public class Main {
 	public static void printHelp() {
 		System.out.println("Travel: use 'move' or 'go' plus a direction \n" +
 	"Inspect items: use 'look' or 'inspect' plus an item's name \n" + 
-	"Take items: use 'take' plus an item's name \n" + "Use item: use 'use' plus an item's name\n" + 
+	"Take items: use 'take' plus an item's name \n" + "Use item: use 'use' plus an item's name when it's in your inventory\n" + 
 	"Open inventory: use 'inventory' \n" + "Open help: use 'help' \n" + "Quit: use 'exit'\n");
 	} 
 	
