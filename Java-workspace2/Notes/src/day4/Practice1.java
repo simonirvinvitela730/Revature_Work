@@ -2,6 +2,7 @@ package day4;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class Practice1 {
 	public static void main(String[] args) {
@@ -50,5 +51,20 @@ public class Practice1 {
 		colors.addAll(0, newColors); //9
 		System.out.println(colors);
 		
+		System.out.println("Example Ten: ");
+		Collections.shuffle(colors);//10
+		System.out.println(colors);
+		
+		System.out.println("Example Eleven: ");
+		for (int i = colors.size() - 1; i >= 0; i--) { //11
+			System.out.println(colors.get(i));
+		}
+		
+		System.out.println("Example Twelve: ");
+		System.out.println(colors.subList(2, 4)); //12
+		
+		System.out.println("Example Thirteen: ");
+		Collections.swap(colors, 0, 3);//13
+		System.out.println(colors);
 	}
 }
