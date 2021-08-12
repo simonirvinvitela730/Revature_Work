@@ -39,6 +39,34 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 	}
 	
 	@Override
+	public void accountPending(int accnum) throws SQLException {
+		String sql = "update accounts set status = 'pending' where accnum ="+accnum;
+		
+		statement = connection.createStatement();
+		int update = statement.executeUpdate(sql); 
+		
+		String sql2 = "update users set status = 'pending' where accnum ="+accnum;
+		
+		statement2 = connection.createStatement();
+		int update2 = statement.executeUpdate(sql2);
+		
+	}
+	
+	@Override
+	public void accountReset(int accnum) throws SQLException {
+		String sql = "update accounts set status = null where accnum ="+accnum;
+		
+		statement = connection.createStatement();
+		int update = statement.executeUpdate(sql); 
+		
+		String sql2 = "update users set status = null where accnum ="+accnum;
+		
+		statement2 = connection.createStatement();
+		int update2 = statement.executeUpdate(sql2);
+		
+	}
+	
+	@Override
 	public void accountDeclined(int accnum) throws SQLException {
 		String sql = "update accounts set status = 'declined' where accnum ="+accnum;
 		
@@ -49,8 +77,6 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 		
 		statement2 = connection.createStatement();
 		int update2 = statement.executeUpdate(sql2);
-		
-		System.out.println("Account has been declined");
 		
 	}
 
@@ -256,5 +282,12 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 			employeeInfo.add(username);
 			employeeInfo.add(password);
     	}return employeeInfo;
+	}
+
+	@Override
+	public void deleteAccount(int accnum) throws SQLException {
+		String sql = "delete from accounts where accnum ="+accnum;
+		statement = connection.createStatement();
+    	int update = statement.executeUpdate(sql);
 	}
 }

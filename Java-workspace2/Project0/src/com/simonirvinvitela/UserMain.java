@@ -135,6 +135,8 @@ package com.simonirvinvitela;
 				
 				switch(option2) {
 					case 1:{
+						EmployeeDAO dao2 =  EmployeeDAOFactory.getEmployeeDAO();
+						if(status == null) {
 						System.out.println("Thank you for selecting create new account");
 						System.out.println("To open an account you must make an initial deposit of at least $200");
 						System.out.println("After depositing an inital amount, your account will be processed and pending approval");
@@ -142,16 +144,28 @@ package com.simonirvinvitela;
 						System.out.println("Please allow 1-2 business days for this process");
 						System.out.println("Rules and exceptions may apply");
 						
-						System.out.println("Please enter unique user id: ");
-						int accnum = in.nextInt();
-						
 						System.out.println("Please enter a starting balance to deposit: ");
 						double balance = in.nextDouble();
 						
-						user.setAccnum(accnum);
+						user.setAccnum(accnumber);
 						user.setBalance(balance);
 						
 						dao.addAccount(user);
+						dao2.accountPending(accnumber);
+						
+						}else if(status.equals("pending"))
+							System.out.println("Account awaiting approval");
+						else if(status.equals("declined")) {
+							System.out.println("Your account has been declined");
+							System.out.println("Please contatct our help line at 1-800-NEED-HELP");
+						}else if(status.equals("closed")) {
+							System.out.println("Your account has been closed");
+							System.out.println("You may apply for a new account");
+							dao2.deleteAccount(accnumber);
+							dao2.accountReset(accnumber);
+						}else if(status.equals("active")){
+							System.out.println("You already have an active account");
+						}
 						
 						break;
 						

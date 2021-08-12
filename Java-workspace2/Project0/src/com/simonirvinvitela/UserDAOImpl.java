@@ -72,12 +72,6 @@ public class UserDAOImpl implements UserDAO{
 
 	@Override
 	public double getBalance(int accnum) throws SQLException {
-		
-		/*ConsoleAppender consoleAppender = new ConsoleAppender();
-	    consoleAppender.setThreshold(Level.INFO);
-	    consoleAppender.setLayout(new PatternLayout("%d{HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n"));
-	    consoleAppender.activateOptions();
-	    LogManager.getRootLogger().addAppender(consoleAppender);*/
 	    
 		Account account = new Account();
 		
