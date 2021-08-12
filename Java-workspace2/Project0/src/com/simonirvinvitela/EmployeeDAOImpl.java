@@ -173,7 +173,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 	@Override
 	public void viewLog(){
 		try{    
-            FileInputStream fin=new FileInputStream("src\\com\\simonirvinvitela\\log4jlog.properties");    
+            FileInputStream fin=new FileInputStream("src\\com\\simonirvinvitela\\transactionlog.properties");    
             int i=0;    
             while((i=fin.read())!=-1){    
              System.out.print((char)i);    
