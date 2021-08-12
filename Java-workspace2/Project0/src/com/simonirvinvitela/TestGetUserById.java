@@ -24,7 +24,7 @@ class TestGetUserById {
 		User user2 = dao.getUserById(accnum2);
 		assertEquals(user2.getAccnum(), 2);
 		assertEquals(user2.getUsername(), "monique1");
-		assertEquals(user2.getPassword(), "blue");
+		assertEquals(user2.getPassword(), "blue"); //returns false
 		assertEquals(user2.getAge(), 24);
 		assertEquals(user2.getEmail(), "moniquesimmon1@gmail.com");
 		System.out.println("Account: "+accnum2+" tested...");
