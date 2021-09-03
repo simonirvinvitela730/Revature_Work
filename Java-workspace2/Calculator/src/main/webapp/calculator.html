@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+		<h1>Calculator</h1>
+		<form action="operate" name= "calculator" method="post" onsubmit="onSubmit(event)">
+		<table>
+			<tr>
+				<td>Enter First Number</td>
+				<td><input type="number" name="num1" placeholder="" /></td>
+			</tr>
+			<tr>
+				<td>Enter Second Number</td>
+				<td><input type="number" name="num2" placeholder="" /></td>
+            </tr>
+			<tr>
+				<div>
+				<td colspan="2">
+					<input type="radio" name="operator" id="" value="add"> Addition
+                    <input type="radio" name="operator" id="" value="sub"> Subtraction
+                    <input type="radio" name="operator" id="" value="mult"> Multiplication
+                    <input type="radio" name="operator" id="" value="div"> Division
+				</td>
+                </div>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="Submit "/>
+				 </td>
+			</tr>
+		</table>
+		</form>
+	</div>
+
+    <script>
+
+        function onSubmit(event){
+            event.preventDefault()
+    
+            var num1 = document.calculator.num1.value;
+            var num2 = document.calculator.num2.value;
+            var operator = document.calculator.operator.value;
+            
+            if(operator == "add"){
+                let result = parseInt(num1) + parseInt(num2)
+                alert(result)
+            }
+
+            if(operator == "sub"){
+                let result = (num1 - num2).toString()
+                alert(result)
+            }
+
+            if(operator == "mult"){
+                let result = (num1 * num2).toString()
+                alert(result)
+            }
+
+            if(operator == "div"){
+                let result = (num1 / num2).toString()
+                alert(result)
+            }
+    
+        }
+    
+    </script>
+</body>
+</html>

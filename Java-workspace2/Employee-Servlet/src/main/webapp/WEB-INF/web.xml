@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+
+  <servlet>
+	<servlet-name>AddEmployee</servlet-name>
+	<servlet-class>com.simonirvinvitela.AddEmployee</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>AddEmployee</servlet-name>
+	<url-pattern>/AddEmployee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>UpdateNavigator</servlet-name>
+	<servlet-class>com.simonirvinvitela.UpdateNavigator</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>UpdateNavigator</servlet-name>
+	<url-pattern>/UpdateNavigator</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>UpdateEmployee</servlet-name>
+	<servlet-class>com.simonirvinvitela.UpdateEmployee</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>UpdateEmployee</servlet-name>
+	<url-pattern>/UpdateEmployee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>DeleteNavigator</servlet-name>
+	<servlet-class>com.simonirvinvitela.DeleteNavigator</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>DeleteNavigator</servlet-name>
+	<url-pattern>/DeleteNavigator</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>DeleteEmployee</servlet-name>
+	<servlet-class>com.simonirvinvitela.DeleteEmployee</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>DeleteEmployee</servlet-name>
+	<url-pattern>/DeleteEmployee</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>EmployeeList</servlet-name>
+	<servlet-class>com.simonirvinvitela.EmployeeList</servlet-class>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>EmployeeList</servlet-name>
+	<url-pattern>/EmployeeList</url-pattern>
+</servlet-mapping>
+
+
+<welcome-file-list>
+ 	<welcome-file>addEmployee.html</welcome-file>
+ </welcome-file-list>
+ 
+</web-app>

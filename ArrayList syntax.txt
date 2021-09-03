@@ -1,0 +1,2 @@
+If you are using hibernate, you can either use HQL or createCriteria
+ArrayList<Employee> emp = (ArrayList<Employee>) session.createCriteria(Employee.class).list();
